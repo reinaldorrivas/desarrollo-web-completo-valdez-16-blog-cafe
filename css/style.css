@@ -34,6 +34,7 @@ h2,
 h3,
 h4 {
   font-family: var(--headingFont);
+  line-height: 1.2;
 }
 
 h1 {
@@ -82,15 +83,15 @@ img {
 }
 
 .btn {
+  color: var(--white);
   display: block;
   font-family: var(--headingFont);
-  color: var(--white);
-  text-align: center;
-  padding: 1rem 3rem;
   font-size: 1.8rem;
   font-weight: 700;
-  text-transform: uppercase;
   margin-bottom: 2rem;
+  padding: 1rem 3rem;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 @media (min-width: 768px) {
@@ -101,6 +102,10 @@ img {
 
 .btn--primary {
   background-color: var(--black);
+}
+
+.btn--secondary {
+  background-color: var(--primaryColor);
 }
 
 /*
@@ -171,10 +176,6 @@ img {
   }
 }
 
-.header__text--line-height {
-  line-height: 1.25;
-}
-
 /*
  * Blog
  */
@@ -187,7 +188,31 @@ img {
   }
 }
 
-.blog-entry:not(.blog-entry:last-child) {
+.blog-entry:not(.blog-entry:last-child),
+.widget-curso:not(.widget-curso:last-child) {
   border-bottom: 1px solid var(--separatorColor);
   margin-bottom: 2rem;
+}
+
+/*
+ *  Sidebar Cursos
+ */
+
+.cursos {
+  list-style-type: none;
+}
+
+.widget-curso__label,
+.widget-curso__info {
+  font-size: 2rem;
+}
+
+.widget-curso__label {
+  font-family: var(--headingFont);
+  font-weight: 700;
+}
+
+.widget-curso__info {
+  font-family: var(--paragraphFont);
+  font-weight: 400;
 }
