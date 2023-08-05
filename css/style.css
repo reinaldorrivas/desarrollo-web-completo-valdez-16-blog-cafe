@@ -108,6 +108,18 @@ img {
   background-color: var(--primaryColor);
 }
 
+.bar {
+  padding-top: 3rem;
+}
+
+@media (min-width: 768px) {
+  .bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
 /*
  * Header
  */
@@ -116,14 +128,6 @@ img {
   background: var(--fallbackBgColor) url("../img/banner.jpg") center center /
     cover no-repeat;
   height: 60rem;
-}
-
-@media (min-width: 768px) {
-  .header__bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
 }
 
 .logo__nombre {
@@ -188,14 +192,23 @@ img {
   }
 }
 
+/*
+ * Shared Property: Blog, Sidebar Cursos & Pagina Cursos
+ */
+
 .blog-entry:not(.blog-entry:last-child),
 .widget-curso:not(.widget-curso:last-child) {
-  border-bottom: 1px solid var(--separatorColor);
   margin-bottom: 2rem;
 }
 
+.blog-entry:not(.blog-entry:last-child),
+.widget-curso:not(.widget-curso:last-child),
+.curso:not(.curso:last-child) {
+  border-bottom: 1px solid var(--separatorColor);
+}
+
 /*
- *  Sidebar Cursos
+ *  Sidebar Cursos & Pagina Cursos
  */
 
 .cursos {
@@ -203,16 +216,57 @@ img {
 }
 
 .widget-curso__label,
-.widget-curso__info {
+.widget-curso__info,
+.curso__info {
   font-size: 2rem;
 }
 
-.widget-curso__label {
+.widget-curso__label,
+.curso__label {
   font-family: var(--headingFont);
   font-weight: 700;
 }
 
-.widget-curso__info {
+.widget-curso__info,
+.curso__info {
   font-family: var(--paragraphFont);
   font-weight: 400;
+}
+
+/*
+ * Pagina Cursos
+ */
+
+.curso {
+  padding: 3rem 0;
+}
+
+@media (min-width: 768px) {
+  .curso {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 2rem;
+  }
+}
+
+/*
+ *  About Us
+ */
+
+@media (min-width: 768px) {
+  .about-us {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+/*
+ * Footer
+ */
+
+.footer {
+  background-color: var(--black);
+  margin-top: 4rem;
+  padding-bottom: 3rem;
 }
