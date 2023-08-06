@@ -51,7 +51,17 @@
 
       <div class="curso">
         <div class="curso__imagen">
-          <img src="./img/curso1.jpg" alt="Imagen Correspondiente al Curso 1" />
+          <picture>
+            <source
+              loading="lazy"
+              srcset="./img/curso1.webp"
+              type="image/webp"
+            />
+            <img
+              src="./img/curso1.webp"
+              alt="Imagen Correspondiente al Curso 1"
+            />
+          </picture>
         </div>
 
         <div class="curso__info">
@@ -80,7 +90,17 @@
 
       <div class="curso">
         <div class="curso__imagen">
-          <img src="./img/curso1.jpg" alt="Imagen Correspondiente al Curso 1" />
+          <picture>
+            <source
+              loading="lazy"
+              srcset="./img/curso2.webp"
+              type="image/webp"
+            />
+            <img
+              src="./img/curso2.jpg"
+              alt="Imagen Correspondiente al Curso 2"
+            />
+          </picture>
         </div>
 
         <div class="curso__info">
@@ -109,7 +129,17 @@
 
       <div class="curso">
         <div class="curso__imagen">
-          <img src="./img/curso1.jpg" alt="Imagen Correspondiente al Curso 1" />
+          <picture>
+            <source
+              loading="lazy"
+              srcset="./img/curso3.webp"
+              type="image/webp"
+            />
+            <img
+              src="./img/curso3.jpg"
+              alt="Imagen Correspondiente al Curso 3"
+            />
+          </picture>
         </div>
 
         <div class="curso__info">
@@ -156,5 +186,7 @@
         </nav>
       </div>
     </footer>
+
+    <script src="./js/modernizr.js"></script>
   </body>
 </html>

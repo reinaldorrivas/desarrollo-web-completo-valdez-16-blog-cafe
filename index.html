@@ -4,6 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="This page is dedicated about coffee recipes and offers some courses about it.">
+    <title>Blog de Café</title>
+
+    <!-- Prefetch -->
+    <link rel="prefetch" href="./cursos.html" as="document" />
+
+    <!-- Preload -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,7 +21,6 @@
     <link rel="stylesheet" href="./css/normalize.css" />
     <link rel="preload" href="./css/style.css" as="style" />
     <link rel="stylesheet" href="./css/style.css" />
-    <title>Blog de Café</title>
   </head>
 
   <body>
@@ -52,7 +58,14 @@
 
         <article class="blog-entry">
           <div class="blog-entry__image">
-            <img src="./img/blog1.jpg" alt="Imagen blog" />
+            <picture>
+              <source
+                loading="lazy"
+                srcset="./img/blog1.webp"
+                type="image/webp"
+              />
+              <img loading="lazy" src="./img/blog1.jpg" alt="Imagen blog" />
+            </picture>
           </div>
 
           <h4 class="zero-margin">Tipos de Grano de Cafe</h4>
@@ -69,7 +82,14 @@
 
         <article class="blog-entry">
           <div class="blog-entry__image">
-            <img src="./img/blog2.jpg" alt="Imagen blog" />
+            <picture>
+              <source
+                loading="lazy"
+                srcset="./img/blog2.webp"
+                type="image/webp"
+              />
+              <img loading="lazy" src="./img/blog2.jpg" alt="Imagen blog" />
+            </picture>
           </div>
 
           <h4 class="zero-margin">3 Deliciosas Recetas de Cafe</h4>
@@ -86,7 +106,14 @@
 
         <article class="blog-entry">
           <div class="blog-entry__image">
-            <img src="./img/blog3.jpg" alt="Imagen blog" />
+            <picture>
+              <source
+                loading="lazy"
+                srcset="./img/blog3.webp"
+                type="image/webp"
+              />
+              <img loading="lazy" src="./img/blog3.jpg" alt="Imagen blog" />
+            </picture>
           </div>
 
           <h4 class="zero-margin">Beneficios del Cafe</h4>
@@ -120,7 +147,7 @@
             </p>
 
             <a href="./entrada.html" class="btn btn--secondary">
-              Mas Información
+              Mas Información sobre nuestros cursos
             </a>
           </li>
 
@@ -140,7 +167,7 @@
             </p>
 
             <a href="./entrada.html" class="btn btn--secondary">
-              Mas Información
+              Mas Información sobre nuestros cursos
             </a>
           </li>
         </ul>
@@ -166,5 +193,7 @@
         </nav>
       </div>
     </footer>
+
+    <script src="./js/modernizr.js"></script>
   </body>
 </html>

@@ -51,7 +51,14 @@
 
       <div class="about-us">
         <div class="about-us__image">
-          <img src="./img/nosotros.jpg" alt="Sobre Nosotros" />
+          <picture>
+            <source
+              loading="lazy"
+              srcset="./img/nosotros.webp"
+              type="image/webp"
+            />
+            <img src="./img/nosotros.jpg" alt="Sobre Nosotros" />
+          </picture>
         </div>
 
         <div class="about-us__text">
@@ -94,5 +101,7 @@
         </nav>
       </div>
     </footer>
+
+    <script src="./js/modernizr.js"></script>
   </body>
 </html>
